@@ -16,9 +16,12 @@ class Rectangle implements Shape {
     }
 }
 
-$rect = new Rectangle;
+function drawStuff(Shape $shape) {
+    $shape->draw();
+}
 
-$rect->draw();
+$shape new Rectangle();
+drawStuff($shape);
 
 /*
 Source: Easy Learn Tutorial
