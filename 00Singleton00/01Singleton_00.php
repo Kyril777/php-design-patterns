@@ -4,7 +4,9 @@ class Database {
     public static $instance;
 
     public static function getInstance() {
-        Database::$instance = new Database;
+        if(!isset(Database::$instance))
+            Database::$instance = new Database();
+
         return Database::$instance;
     }
 
